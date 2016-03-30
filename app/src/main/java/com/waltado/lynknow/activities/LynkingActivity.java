@@ -1,13 +1,15 @@
-package com.waltado.lynknow;
+package com.waltado.lynknow.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.waltado.lynknow.R;
+
+public class LynkingActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_lynking);
     }
 }

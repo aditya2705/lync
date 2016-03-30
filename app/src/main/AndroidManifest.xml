@@ -8,13 +8,20 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activities.RegisterActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activities.SelectActivity" />
+        <activity android:name=".activities.MainActivity" />
+        <activity android:name=".activities.LynkingActivity" />
+        <activity android:name=".activities.LynkingCategoriesActivity" />
+        <activity android:name=".activities.UserInfoActivity" />
+        <activity android:name=".activities.ProfileActivity" />
+        <activity android:name=".activities.StatusUpdateActivity"></activity>
     </application>
 
 </manifest>
