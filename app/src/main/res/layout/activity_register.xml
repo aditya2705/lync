@@ -11,6 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/_20sdp"
         android:orientation="vertical">
 
         <RelativeLayout
@@ -113,6 +114,7 @@
 
 
             <com.waltado.lynknow.customViews.LatoFontTextView
+                android:id="@+id/proceedView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"

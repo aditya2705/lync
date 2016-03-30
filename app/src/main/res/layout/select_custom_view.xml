@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_10sdp">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/football"
+        android:padding="@dimen/_15sdp"
+        android:background="@drawable/circular_border"/>
+
+    <TextView
+        android:layout_width="@dimen/_22sdp"
+        android:layout_height="@dimen/_22sdp"
+        android:text="8"
+        android:textSize="@dimen/_13sdp"
+        android:textColor="@color/md_white_1000"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/_5sdp"
+        android:padding="@dimen/_3sdp"
+        android:background="@drawable/circular_fill"/>
+
+    <com.waltado.lynknow.customViews.LatoFontTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Technology"
+        android:textColor="@color/md_grey_800"
+        android:textSize="@dimen/_15sdp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
