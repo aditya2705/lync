@@ -37,13 +37,13 @@
         <ImageView
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_40sdp"
-            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_20sdp"
             android:src="@drawable/computer"/>
 
         <ImageView
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_40sdp"
-            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_20sdp"
             android:src="@drawable/computer"/>
 
         <ImageView
@@ -71,6 +71,7 @@
         <include
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_10sdp"
             layout="@layout/profile_thumbnail_view" />
 
         <include

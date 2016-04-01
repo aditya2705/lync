@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="@dimen/_5sdp">
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -12,32 +11,14 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/icon"
-            android:layout_width="@dimen/_60sdp"
-            android:layout_height="@dimen/_60sdp"
-            android:src="@drawable/profile"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:src="@drawable/dicaprio"
             app:civ_border_width="@dimen/_3sdp"
-            app:civ_border_color="@color/appThemeColor"
+            app:civ_border_color="#98f2de"
             android:layout_centerHorizontal="true"
             />
 
-        <RelativeLayout
-            android:layout_width="@dimen/_22sdp"
-            android:layout_height="@dimen/_22sdp"
-            android:background="@drawable/circular_fill_1"
-            android:gravity="center"
-            android:layout_alignRight="@+id/icon"
-            android:layout_margin="@dimen/_1sdp">
-
-        <TextView
-            android:layout_width="@dimen/_18sdp"
-            android:layout_height="@dimen/_18sdp"
-            android:text="100%"
-            android:textSize="@dimen/_6sdp"
-            android:textColor="@color/md_white_1000"
-            android:gravity="center"
-            android:background="@drawable/circular_fill_2"/>
-
-        </RelativeLayout>
 
 
     </RelativeLayout>
