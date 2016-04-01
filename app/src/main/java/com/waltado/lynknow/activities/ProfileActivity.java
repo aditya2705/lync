@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import com.ogaclejapan.smarttablayout.SmartTabLayout;
 import com.waltado.lynknow.R;
 import com.waltado.lynknow.fragments.BlankFragment;
+import com.waltado.lynknow.fragments.ProfileAboutFragment;
 
 public class ProfileActivity extends AppCompatActivity {
 
@@ -30,15 +31,16 @@ public class ProfileActivity extends AppCompatActivity {
 
 
         profilePager = (ViewPager) findViewById(R.id.viewpager);
+        profilePager.setOffscreenPageLimit(20);
 
         SmartTabLayout viewPagerTab = (SmartTabLayout) findViewById(R.id.profile_tabs);
 
         adapter = new ProfileTabAdapter(getSupportFragmentManager());
         profilePager.setAdapter(adapter);
 
-        if (viewPagerTab != null) {
-            viewPagerTab.setViewPager(profilePager);
-        }
+
+        viewPagerTab.setViewPager(profilePager);
+
 
 
     }
@@ -86,7 +88,7 @@ public class ProfileActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 default:
-                    return new BlankFragment();
+                    return new ProfileAboutFragment();
             }
         }
     }
