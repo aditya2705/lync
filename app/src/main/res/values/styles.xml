@@ -27,4 +27,13 @@
         <item name="android:popupBackground">@color/md_white_1000</item>
     </style>
 
+    <style name="ToolbarSwitchStyle">
+        <!-- Active thumb color & Active track color(30% transparency) -->
+        <item name="colorControlActivated">@color/md_white_1000</item>
+        <!-- Inactive thumb color -->
+        <item name="colorSwitchThumbNormal">@color/md_white_1000</item>
+        <!-- Inactive track color(30% transparency) -->
+        <item name="android:colorForeground">#1e7965</item>
+    </style>
+
 </resources>

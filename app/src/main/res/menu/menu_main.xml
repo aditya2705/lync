@@ -2,6 +2,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
     <!-- Settings, should always be in the overflow -->
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/ic_search_white"
+        android:title="Search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="collapseActionView|ifRoom" />
+
+    <item
+        android:id="@+id/myswitch"
+        android:title=""
+        android:actionLayout="@layout/menu_switch_layout"
+        app:showAsAction="always"/>
+
     <item android:id="@+id/action_settings"
         android:title="Settings"
         app:showAsAction="never" />
