@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.waltado.lynknow.R;
-import com.waltado.lynknow.customViews.LatoFontTextView;
+import com.waltado.lynknow.customViews.LatoFontLightTextView;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -15,10 +15,10 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        ((LatoFontTextView)findViewById(R.id.proceedView)).setOnClickListener(new View.OnClickListener() {
+        ((LatoFontLightTextView)findViewById(R.id.proceedView)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RegisterActivity.this, SelectActivity.class);
+                Intent intent = new Intent(RegisterActivity.this, ProfileActivity.class);
                 startActivity(intent);
             }
         });

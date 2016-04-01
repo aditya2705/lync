@@ -25,7 +25,7 @@
                 android:scaleType="fitXY"
                 android:src="@drawable/abstract_img"/>
 
-            <com.waltado.lynknow.customViews.LatoFontTextView
+            <com.waltado.lynknow.customViews.LatoFontHeavyTextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -33,7 +33,7 @@
                 android:textColor="@color/md_white_1000"
                 android:textSize="@dimen/_32sdp"/>
 
-            <com.waltado.lynknow.customViews.LatoFontTextView
+            <com.waltado.lynknow.customViews.LatoFontLightTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
@@ -53,7 +53,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <com.waltado.lynknow.customViews.LatoFontTextView
+            <com.waltado.lynknow.customViews.LatoFontLightTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
@@ -113,7 +113,7 @@
                 android:background="@color/appThemeColorDark"/>
 
 
-            <com.waltado.lynknow.customViews.LatoFontTextView
+            <com.waltado.lynknow.customViews.LatoFontLightTextView
                 android:id="@+id/proceedView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

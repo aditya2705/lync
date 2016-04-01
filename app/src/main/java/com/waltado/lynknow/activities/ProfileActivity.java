@@ -1,15 +1,95 @@
 package com.waltado.lynknow.activities;
 
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 
+import com.ogaclejapan.smarttablayout.SmartTabLayout;
 import com.waltado.lynknow.R;
+import com.waltado.lynknow.fragments.BlankFragment;
 
 public class ProfileActivity extends AppCompatActivity {
+
+    private Toolbar mToolbar;
+    private ViewPager profilePager;
+    private ProfileTabAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
+
+
+        profilePager = (ViewPager) findViewById(R.id.viewpager);
+
+        SmartTabLayout viewPagerTab = (SmartTabLayout) findViewById(R.id.profile_tabs);
+
+        adapter = new ProfileTabAdapter(getSupportFragmentManager());
+        profilePager.setAdapter(adapter);
+
+        if (viewPagerTab != null) {
+            viewPagerTab.setViewPager(profilePager);
+        }
+
+
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    public class ProfileTabAdapter extends FragmentPagerAdapter {
+        private final String[] tab_names = {"About", "Photos", "Groups", "Events"};
+
+        private ProfileTabAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return tab_names[position];
+        }
+
+        @Override
+        public int getCount() {
+            return tab_names.length;
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            switch (position) {
+                default:
+                    return new BlankFragment();
+            }
+        }
+    }
+
+
 }

@@ -8,19 +8,19 @@ import android.widget.TextView;
 /**
  * Created by Aditya Rathi on 31-Mar-16.
  */
-public class LatoFontTextView extends TextView {
+public class LatoFontLightTextView extends TextView {
 
-    public LatoFontTextView(Context context) {
+    public LatoFontLightTextView(Context context) {
         super(context);
         init();
     }
 
-    public LatoFontTextView(Context context, AttributeSet attrs) {
+    public LatoFontLightTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
     }
 
-    public LatoFontTextView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public LatoFontLightTextView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
     }
