@@ -47,7 +47,7 @@
                     android:layout_width="@dimen/_25sdp"
                     android:layout_height="@dimen/_25sdp"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/ic_quote"/>
+                    android:src="@drawable/ic_quote_inverted"/>
 
                 <ImageView
                     android:layout_width="@dimen/_25sdp"
@@ -58,8 +58,9 @@
                     android:src="@drawable/ic_quote"/>
 
                 <ImageView
-                    android:layout_width="@dimen/_20sdp"
-                    android:layout_height="@dimen/_20sdp"
+                    android:layout_width="@dimen/_17sdp"
+                    android:layout_height="@dimen/_17sdp"
+                    android:layout_margin="@dimen/_5sdp"
                     android:adjustViewBounds="true"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"

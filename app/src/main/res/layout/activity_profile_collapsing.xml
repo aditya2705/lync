@@ -64,7 +64,8 @@
                         android:textColor="@color/md_white_1000"
                         android:layout_marginTop="@dimen/_10sdp"
                         android:text="Leonardo Di Caprio"
-                        android:textSize="@dimen/_15sdp"/>
+                        android:singleLine="true"
+                        android:textSize="@dimen/_14sdp"/>
 
                     <com.waltado.lynknow.customViews.LatoFontHeavyTextView
                         android:layout_width="wrap_content"
@@ -74,7 +75,19 @@
                         android:layout_marginTop="@dimen/_10sdp"
                         android:layout_marginLeft="@dimen/_10sdp"
                         android:text="45"
-                        android:textSize="@dimen/_15sdp"/>
+                        android:singleLine="true"
+                        android:textSize="@dimen/_14sdp"/>
+
+                    <com.waltado.lynknow.customViews.LatoFontHeavyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/md_white_1000"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:text="Mumbai"
+                        android:singleLine="true"
+                        android:textSize="@dimen/_14sdp"/>
 
                 </LinearLayout>
 
@@ -86,6 +99,7 @@
                     android:textColor="@color/md_white_1000"
                     android:layout_marginTop="@dimen/_7sdp"
                     android:text="Dinner at Aer Lounge"
+                    android:singleLine="true"
                     android:textStyle="bold"
                     android:textSize="@dimen/_14sdp"/>
 
@@ -95,8 +109,7 @@
                     android:gravity="center_horizontal"
                     android:textColor="@color/md_white_1000"
                     android:layout_marginTop="@dimen/_7sdp"
-                    android:text="14 minutes ago"
-                    android:textStyle="bold"
+                    android:text="14 KM away"
                     android:textSize="@dimen/_11sdp"/>
 
             </LinearLayout>
@@ -104,7 +117,7 @@
             <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_105sdp"
+                android:layout_height="@dimen/_100sdp"
                 android:gravity="top"
                 app:layout_collapseMode="pin"
                 android:minHeight="@dimen/_48sdp"
@@ -128,9 +141,9 @@
             <com.ogaclejapan.smarttablayout.SmartTabLayout
                 android:id="@+id/profile_tabs"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_40sdp"
+                android:layout_height="@dimen/_35sdp"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginBottom="@dimen/_22sdp"
+                android:layout_marginBottom="@dimen/_25sdp"
                 android:background="@android:color/transparent"
                 app:stl_defaultTabTextColor="@color/white"
                 app:stl_distributeEvenly="true"
@@ -153,7 +166,7 @@
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
     <RelativeLayout
@@ -161,15 +174,15 @@
         android:layout_height="wrap_content"
         android:background="@drawable/circular_fill_1"
         android:padding="@dimen/_4sdp"
-        android:elevation="@dimen/_3sdp"
+        android:elevation="@dimen/_5sdp"
         app:layout_anchor="@id/collapse_toolbar"
         app:layout_anchorGravity="bottom|center_horizontal">
 
         <TextView
-            android:layout_width="@dimen/_35sdp"
-            android:layout_height="@dimen/_35sdp"
+            android:layout_width="@dimen/_43sdp"
+            android:layout_height="@dimen/_43sdp"
             android:text="99%"
-            android:textSize="@dimen/_12sdp"
+            android:textSize="@dimen/_13sdp"
             android:textColor="@color/md_white_1000"
             android:gravity="center"
             android:background="@drawable/circular_fill_2"/>
@@ -177,11 +190,11 @@
     </RelativeLayout>
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
+        android:id="@+id/forward_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/_15sdp"
-        android:src="@drawable/ic_plus" />
+        android:src="@drawable/ic_arrow_forward_white" />
 
 </android.support.design.widget.CoordinatorLayout>

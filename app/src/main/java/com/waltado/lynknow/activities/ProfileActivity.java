@@ -1,5 +1,6 @@
 package com.waltado.lynknow.activities;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -9,6 +10,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.ogaclejapan.smarttablayout.SmartTabLayout;
 import com.waltado.lynknow.R;
@@ -29,7 +31,6 @@ public class ProfileActivity extends AppCompatActivity {
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
-
         profilePager = (ViewPager) findViewById(R.id.viewpager);
         profilePager.setOffscreenPageLimit(20);
 
@@ -38,8 +39,15 @@ public class ProfileActivity extends AppCompatActivity {
         adapter = new ProfileTabAdapter(getSupportFragmentManager());
         profilePager.setAdapter(adapter);
 
-
         viewPagerTab.setViewPager(profilePager);
+
+        findViewById(R.id.forward_fab).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProfileActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
 

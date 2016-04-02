@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="country_codes">
+        <item>(+91) India</item>
+        <item>(+25) United States</item>
+        <item>(+99) United Kingdom</item>
+        <item>(+65) Pakistan</item>
+        <item>(+51) Germany</item>
+        <item>(+42) Greece</item>
+    </string-array>
+</resources>

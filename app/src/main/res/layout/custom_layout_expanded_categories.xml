@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingTop="@dimen/_10sdp"
     android:paddingBottom="@dimen/_10sdp"
     android:paddingLeft="@dimen/_5sdp"
@@ -28,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_marginRight="@dimen/_10sdp"
-            android:buttonTint="@color/md_grey_700"
+            android:buttonTint="@color/appThemeColorDark"
             android:layout_centerVertical="true"/>
 
 
@@ -54,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_marginRight="@dimen/_10sdp"
-            android:buttonTint="@color/md_grey_700"
+            android:buttonTint="@color/appThemeColorDark"
             android:layout_centerVertical="true"/>
 
 
@@ -80,7 +81,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_marginRight="@dimen/_10sdp"
-            android:buttonTint="@color/md_grey_700"
+            android:buttonTint="@color/appThemeColorDark"
             android:layout_centerVertical="true"/>
 
 
@@ -106,7 +107,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_marginRight="@dimen/_10sdp"
-            android:buttonTint="@color/md_grey_700"
+            android:buttonTint="@color/appThemeColorDark"
             android:layout_centerVertical="true"/>
 
 

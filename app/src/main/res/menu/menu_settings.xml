@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
     <!-- Settings, should always be in the overflow -->
     <item android:id="@+id/action_register"
-        android:title="Register Screen"
+        android:title="Settings"
         app:showAsAction="never" />
 
 
