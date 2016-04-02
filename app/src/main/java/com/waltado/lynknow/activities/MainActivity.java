@@ -1,5 +1,6 @@
 package com.waltado.lynknow.activities;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -131,9 +132,32 @@ public class MainActivity extends AppCompatActivity implements SmartTabLayout.Ta
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
+        Intent intent;
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_register) {
+            this.finish();
+            return true;
+        }else if(id == R.id.menu_1){
+            return true;
+        }else if(id == R.id.menu_2){
+            intent = new Intent(MainActivity.this,StatusUpdateActivity.class);
+            startActivity(intent);
+            return true;
+        }else if(id == R.id.menu_3){
+            intent = new Intent(MainActivity.this,SelectActivity.class);
+            startActivity(intent);
+            return true;
+        }else if(id == R.id.menu_4){
+            intent = new Intent(MainActivity.this,LynkingCategoriesActivity.class);
+            startActivity(intent);
+            return true;
+        }else if(id == R.id.menu_5){
+            intent = new Intent(MainActivity.this,ProfileActivity.class);
+            startActivity(intent);
+            return true;
+        }else if(id == R.id.menu_6){
+            intent = new Intent(MainActivity.this,UserInfoActivity.class);
+            startActivity(intent);
             return true;
         }else if(id == R.id.search){
             SearchView mSearchView = (SearchView) MenuItemCompat.getActionView(item);

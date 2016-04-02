@@ -2,8 +2,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
     <!-- Settings, should always be in the overflow -->
-    <item android:id="@+id/action_settings"
-        android:title="Settings"
+    <item android:id="@+id/action_register"
+        android:title="Register Screen"
         app:showAsAction="never" />
+
+
 
 </menu>

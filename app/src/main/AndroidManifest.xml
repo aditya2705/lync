@@ -11,7 +11,10 @@
         <activity android:name=".activities.RegisterActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar"
             android:windowSoftInputMode="adjustResize">
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".activities.SelectActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar"/>
@@ -21,13 +24,12 @@
         </activity>
         <activity android:name=".activities.LynkingCategoriesActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-        <activity android:name=".activities.UserInfoActivity" />
+        <activity android:name=".activities.UserInfoActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+
+        </activity>
         <activity android:name=".activities.ProfileActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
 

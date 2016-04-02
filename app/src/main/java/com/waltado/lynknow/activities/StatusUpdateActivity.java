@@ -12,7 +12,6 @@ import android.view.MenuItem;
 
 import com.waltado.lynknow.R;
 import com.waltado.lynknow.fragments.MoodImageFragment;
-import com.waltado.lynknow.fragments.ProfileAboutFragment;
 
 public class StatusUpdateActivity extends AppCompatActivity {
 
@@ -50,7 +49,7 @@ public class StatusUpdateActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_register) {
             return true;
         }
 

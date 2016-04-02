@@ -20,14 +20,14 @@
             android:layout_centerHorizontal="true"/>
 
         <TextView
-            android:layout_width="@dimen/_25sdp"
-            android:layout_height="@dimen/_25sdp"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
             android:text="8"
             android:textSize="@dimen/_14sdp"
             android:textColor="@color/md_white_1000"
             android:gravity="center"
+            android:layout_alignTop="@+id/icon"
             android:layout_alignRight="@+id/icon"
-            android:layout_margin="@dimen/_5sdp"
             android:padding="@dimen/_5sdp"
             android:background="@drawable/circular_fill_blue"/>
 
