@@ -32,7 +32,7 @@ public class ContactListFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        rootView = inflater.inflate(R.layout.fragment_contact_list, container, false);
+        rootView = inflater.inflate(R.layout.fragment_recycler_view, container, false);
 
         recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
         ArrayList<ContactCustomObject> contactCustomObjectArrayList = new ArrayList<>();

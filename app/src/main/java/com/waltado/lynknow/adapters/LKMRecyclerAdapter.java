@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.waltado.lynknow.R;
 import com.waltado.lynknow.objects.ContactCustomObject;
+import com.waltado.lynknow.objects.LKMCustomObject;
 
 import java.util.ArrayList;
 
@@ -21,26 +22,26 @@ import de.hdodenhof.circleimageview.CircleImageView;
 /**
  * Created by SHWETHA on 24-02-2016.
  */
-public class ContactsRecyclerAdapter extends RecyclerView.Adapter<ContactsCustomViewHolder> {
+public class LKMRecyclerAdapter extends RecyclerView.Adapter<ContactsCustomViewHolder> {
 
     private Context context;
-    private ArrayList<ContactCustomObject> customObjectArrayList;
+    private ArrayList<LKMCustomObject> customObjectArrayList;
 
-    public ContactsRecyclerAdapter(Context context, ArrayList<ContactCustomObject> customObjectArrayList) {
+    public LKMRecyclerAdapter(Context context, ArrayList<LKMCustomObject> customObjectArrayList) {
         this.context = context;
         this.customObjectArrayList = customObjectArrayList;
     }
 
     @Override
     public ContactsCustomViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.custom_contact_item, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.lkm_item, parent, false);
         ContactsCustomViewHolder customViewHolder = new ContactsCustomViewHolder(v);
         return customViewHolder;
     }
 
     @Override
     public void onBindViewHolder(ContactsCustomViewHolder holder, int position) {
-        ContactCustomObject customObject = customObjectArrayList.get(position);
+        LKMCustomObject customObject = customObjectArrayList.get(position);
     }
 
     @Override
@@ -49,18 +50,10 @@ public class ContactsRecyclerAdapter extends RecyclerView.Adapter<ContactsCustom
     }
 }
 
-class ContactsCustomViewHolder extends RecyclerView.ViewHolder {
+class LKMCustomViewHolder extends RecyclerView.ViewHolder {
 
-    public TextView titleTextView, descriptionTextView, timeTextView;
-    public CircleImageView imageView;
-
-    public ContactsCustomViewHolder(View itemView) {
+    public LKMCustomViewHolder(View itemView) {
         super(itemView);
-        titleTextView = (TextView) itemView.findViewById(R.id.contact_title);
-        descriptionTextView = (TextView) itemView.findViewById(R.id.contact_description);
-        timeTextView = (TextView) itemView.findViewById(R.id.time_text);
-        imageView = (CircleImageView) itemView.findViewById(R.id.image);
     }
 }
-
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ripple xmlns:android="http://schemas.android.com/apk/res/android"
-    android:color="#03735a">
+    android:color="#0c8064">
     <item android:id="@android:id/mask">
         <shape>
-            <solid android:color="#03735a"/>
+            <solid android:color="#0c8064"/>
             <corners android:radius="@dimen/_20sdp"/>
         </shape>
     </item>

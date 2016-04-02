@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sample"/>
+
+        <com.waltado.lynknow.customViews.LatoFontLightTextView
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:text="30"
+            android:gravity="center"
+            android:textColor="@color/md_white_1000"
+            android:textSize="@dimen/_8sdp"
+            android:background="@drawable/button_selector"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:background="@color/appThemeColor"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circular_fill_1"
+            android:padding="@dimen/_4sdp">
+
+            <TextView
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:text="99%"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/md_white_1000"
+                android:gravity="center"
+                android:background="@drawable/circular_fill_2"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <com.waltado.lynknow.customViews.LatoFontHeavyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/md_white_1000"
+                android:textSize="@dimen/_11sdp"
+                android:text="Itachi Uchiha"/>
+
+            <com.waltado.lynknow.customViews.LatoFontLightTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/md_white_1000"
+                android:textSize="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:text="Dinner At Aer Lounge, Mumbai"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textStyle="italic"
+                android:textColor="@color/md_white_1000"
+                android:textSize="@dimen/_9sdp"
+                android:text="14 KM away"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_person_add_white"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_gravity="center_vertical"/>
+
+        <ImageView
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_chat_white"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_gravity="center_vertical"/>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

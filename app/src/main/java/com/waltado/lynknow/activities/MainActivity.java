@@ -23,6 +23,7 @@ import com.ogaclejapan.smarttablayout.SmartTabLayout;
 import com.waltado.lynknow.R;
 import com.waltado.lynknow.fragments.BlankFragment;
 import com.waltado.lynknow.fragments.ContactListFragment;
+import com.waltado.lynknow.fragments.LKMListFragment;
 
 public class MainActivity extends AppCompatActivity implements SmartTabLayout.TabProvider{
 
@@ -102,7 +103,7 @@ public class MainActivity extends AppCompatActivity implements SmartTabLayout.Ta
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    return new BlankFragment();
+                    return new LKMListFragment();
                 case 1:
                     return new BlankFragment();
                 case 2:
