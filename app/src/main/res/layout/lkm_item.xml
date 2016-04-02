@@ -14,14 +14,14 @@
             android:scaleType="centerCrop"
             android:src="@drawable/sample"/>
 
-        <com.waltado.lynknow.customViews.LatoFontLightTextView
+        <com.waltado.lynknow.customViews.LatoFontHeavyTextView
             android:layout_width="@dimen/_35sdp"
             android:layout_height="@dimen/_15sdp"
             android:text="30"
             android:gravity="center"
             android:textColor="@color/md_white_1000"
-            android:textSize="@dimen/_8sdp"
-            android:background="@drawable/button_selector"
+            android:textSize="@dimen/_9sdp"
+            android:background="@drawable/rectangle_rounded_1"
             android:layout_margin="@dimen/_10sdp"
             android:layout_alignParentRight="true"/>
 

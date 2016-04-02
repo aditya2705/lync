@@ -40,6 +40,13 @@
         <item name="android:colorForeground">#1e7965</item>
     </style>
 
+    <style name="SeekBarStyle" parent="Widget.AppCompat.SeekBar">
+        <!-- Active thumb color & Active track color(30% transparency) -->
+        <item name="colorControlActivated">@color/md_white_1000</item>
+        <item name="colorControlNormal">#24947c</item>
+        <item name="colorControlHighlight">@color/md_grey_100</item>
+    </style>
+
     <style name="CustomSpinnerStyle" parent="Widget.AppCompat.Spinner">
         <item name="android:background">@color/appThemeColor</item>
         <item name="colorControlNormal">@color/appThemeColorDark</item>

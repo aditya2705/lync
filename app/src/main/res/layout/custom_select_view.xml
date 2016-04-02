@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:src="@drawable/football"
-            android:padding="@dimen/_17sdp"
+            android:padding="@dimen/_19sdp"
             android:background="@drawable/circular_border"
             android:layout_centerHorizontal="true"/>
 

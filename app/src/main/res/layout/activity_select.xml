@@ -19,19 +19,19 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            layout="@layout/select_custom_view" />
+            layout="@layout/custom_select_view" />
 
         <include
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            layout="@layout/select_custom_view" />
+            layout="@layout/custom_select_view" />
 
         <include
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            layout="@layout/select_custom_view" />
+            layout="@layout/custom_select_view" />
 
 
     </LinearLayout>

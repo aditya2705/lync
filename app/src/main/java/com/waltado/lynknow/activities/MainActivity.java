@@ -2,6 +2,7 @@ package com.waltado.lynknow.activities;
 
 import android.content.Intent;
 import android.content.res.Resources;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -19,6 +20,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.flipboard.bottomsheet.BottomSheetLayout;
 import com.ogaclejapan.smarttablayout.SmartTabLayout;
 import com.waltado.lynknow.R;
 import com.waltado.lynknow.fragments.BlankFragment;
@@ -30,12 +32,41 @@ public class MainActivity extends AppCompatActivity implements SmartTabLayout.Ta
     private Toolbar mToolbar;
     private ViewPager mainPager;
     private MainTabAdapter adapter;
+    private View bottomSheetView;
+    private BottomSheetLayout bottomSheetLayout;
+    private FloatingActionButton floatingActionButton;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        floatingActionButton = (FloatingActionButton)findViewById(R.id.bottom_sheet_fab);
+
+        bottomSheetLayout = (BottomSheetLayout) findViewById(R.id.bottomsheet);
+        bottomSheetView = LayoutInflater.from(this).inflate(R.layout.custom_bottom_sheet, bottomSheetLayout, false);
+        bottomSheetView.findViewById(R.id.activity_view).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SelectActivity.class);
+                startActivity(intent);
+            }
+        });
+        bottomSheetView.findViewById(R.id.status_view).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, StatusUpdateActivity.class);
+                startActivity(intent);
+            }
+        });
+        bottomSheetView.findViewById(R.id.map_view).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SelectActivity.class);
+                startActivity(intent);
+            }
+        });
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
@@ -50,7 +81,75 @@ public class MainActivity extends AppCompatActivity implements SmartTabLayout.Ta
 
         viewPagerTab.setCustomTabView(this);
         viewPagerTab.setViewPager(mainPager);
+
+        mainPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+
+                switch (position) {
+                    case 0:
+                        floatingActionButton.setImageResource(R.drawable.ic_plus);
+                        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                bottomSheetLayout.showWithSheetView(bottomSheetView);
+                            }
+                        });
+                        break;
+                    case 1:
+                        floatingActionButton.setImageResource(R.drawable.ic_person_white);
+                        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                bottomSheetLayout.showWithSheetView(bottomSheetView);
+                            }
+                        });
+                        break;
+                    case 2:
+                        floatingActionButton.setImageResource(R.drawable.ic_chat_white);
+                        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                bottomSheetLayout.showWithSheetView(bottomSheetView);
+                            }
+                        });
+                        break;
+                    case 3:
+                        floatingActionButton.setImageResource(R.drawable.ic_group_white);
+                        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                bottomSheetLayout.showWithSheetView(bottomSheetView);
+                            }
+                        });
+                        break;
+                    case 4:
+                        floatingActionButton.setImageResource(R.drawable.ic_calendar_white);
+                        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                bottomSheetLayout.showWithSheetView(bottomSheetView);
+                            }
+                        });
+                        break;
+                }
+
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+
         mainPager.setCurrentItem(2);
+
 
     }
 

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_10sdp"
+    android:background="@color/appThemeColor">
+
+    <com.waltado.lynknow.customViews.LatoFontHeavyTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:gravity="center"
+        android:textColor="@color/md_white_1000"
+        android:text="Itachi Uchiha is by far the greatest anime character ever"
+        android:textSize="@dimen/_11sdp"/>
+
+    <android.support.v7.widget.AppCompatSeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:theme="@style/SeekBarStyle"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/activity_view"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/_5sdp"
+            android:background="?attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:adjustViewBounds="true"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_man_walking_white"/>
+
+            <com.waltado.lynknow.customViews.LatoFontHeavyTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textColor="@color/md_white_1000"
+                android:textSize="@dimen/_11sdp"
+                android:text="Activities"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/map_view"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/_5sdp"
+            android:background="?attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:adjustViewBounds="true"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_map_white"/>
+
+            <com.waltado.lynknow.customViews.LatoFontHeavyTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textColor="@color/md_white_1000"
+                android:textSize="@dimen/_11sdp"
+                android:text="Map"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/status_view"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/_5sdp"
+            android:background="?attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:adjustViewBounds="true"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_edit_white"/>
+
+            <com.waltado.lynknow.customViews.LatoFontHeavyTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textColor="@color/md_white_1000"
+                android:textSize="@dimen/_11sdp"
+                android:text="Status"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
