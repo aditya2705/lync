@@ -43,6 +43,10 @@ public class ContactListFragment extends Fragment {
         contactCustomObjectArrayList.add(new ContactCustomObject());
         contactCustomObjectArrayList.add(new ContactCustomObject());
         contactCustomObjectArrayList.add(new ContactCustomObject());
+        contactCustomObjectArrayList.add(new ContactCustomObject());
+        contactCustomObjectArrayList.add(new ContactCustomObject());
+        contactCustomObjectArrayList.add(new ContactCustomObject());
+        contactCustomObjectArrayList.add(new ContactCustomObject());
 
         ContactsRecyclerAdapter adapter = new ContactsRecyclerAdapter(getActivity(),contactCustomObjectArrayList);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));

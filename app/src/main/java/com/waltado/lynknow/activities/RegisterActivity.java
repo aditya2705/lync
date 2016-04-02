@@ -18,7 +18,7 @@ public class RegisterActivity extends AppCompatActivity {
         ((LatoFontLightTextView)findViewById(R.id.proceedView)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RegisterActivity.this, ProfileActivity.class);
+                Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
