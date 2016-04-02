@@ -1,12 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.waltado.lynknow.activities.LynkingCategoriesActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/md_white_1000"
+    android:orientation="vertical">
 
-</RelativeLayout>
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.waltado.lynknow.customViews.LatoFontHeavyTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Two Steps Away From Lynking"
+                android:textColor="@color/md_grey_800"
+                android:textSize="@dimen/_13sdp"
+                android:gravity="center"
+                android:padding="@dimen/_15sdp"/>
+
+            <include
+                android:id="@+id/arts"
+                layout="@layout/categories_expandable_item_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <include
+                android:id="@+id/fitness"
+                layout="@layout/categories_expandable_item_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+            <include
+                android:id="@+id/technology"
+                layout="@layout/categories_expandable_item_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <include
+                android:id="@+id/sports"
+                layout="@layout/categories_expandable_item_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
