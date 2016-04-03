@@ -4,8 +4,8 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:layout_width="@dimen/_35sdp"
-        android:layout_height="@dimen/_35sdp"
+        android:layout_width="@dimen/_32sdp"
+        android:layout_height="@dimen/_32sdp"
         android:adjustViewBounds="true"
         android:layout_gravity="center_horizontal"
         android:src="@drawable/ic_man_walking"/>
@@ -14,9 +14,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_4sdp"
         android:textColor="@color/appThemeColorDark"
-        android:textSize="@dimen/_11sdp"
+        android:textSize="@dimen/_10sdp"
         android:text="Activities"/>
 
 </LinearLayout>

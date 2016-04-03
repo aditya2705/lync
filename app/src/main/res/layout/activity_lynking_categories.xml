@@ -2,6 +2,7 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/md_white_1000">
 
     <LinearLayout
@@ -73,6 +74,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/_15sdp"
+        app:backgroundTint="@color/appThemeColorDark"
         android:src="@drawable/ic_arrow_forward_white" />
 
 </android.support.design.widget.CoordinatorLayout>

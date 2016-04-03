@@ -195,6 +195,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/_15sdp"
+        app:backgroundTint="@color/appThemeColorDark"
         android:src="@drawable/ic_arrow_forward_white" />
 
 </android.support.design.widget.CoordinatorLayout>

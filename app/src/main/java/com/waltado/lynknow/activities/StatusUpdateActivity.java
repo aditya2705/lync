@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.HorizontalScrollView;
 
 import com.waltado.lynknow.R;
 import com.waltado.lynknow.fragments.MoodImageFragment;
@@ -17,6 +19,7 @@ public class StatusUpdateActivity extends AppCompatActivity {
 
     private Toolbar mToolbar;
     private ViewPager moodPager;
+    private HorizontalScrollView currentlyDoingScrollView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,9 +31,27 @@ public class StatusUpdateActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
 
+        currentlyDoingScrollView = (HorizontalScrollView)findViewById(R.id.currently_doing_scroll_view);
+
         moodPager = (ViewPager)findViewById(R.id.mood_viewpager);
         moodPager.setOffscreenPageLimit(20);
         moodPager.setAdapter(new MoodPagerAdapter(getSupportFragmentManager()));
+
+        findViewById(R.id.right_arrow_mood).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if((moodPager.getCurrentItem()+1)<4)
+                    moodPager.setCurrentItem(moodPager.getCurrentItem()+1);
+            }
+        });
+
+        findViewById(R.id.left_arrow_mood).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if((moodPager.getCurrentItem()-1)>-1)
+                    moodPager.setCurrentItem(moodPager.getCurrentItem()-1);
+            }
+        });
 
     }
 
