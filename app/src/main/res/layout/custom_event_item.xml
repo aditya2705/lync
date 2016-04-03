@@ -16,10 +16,9 @@
         android:id="@+id/icon"
         android:layout_width="@dimen/_50sdp"
         android:layout_height="@dimen/_50sdp"
-        android:src="@drawable/dicaprio"
+        android:src="@drawable/profile"
         app:civ_border_width="@dimen/_3sdp"
         app:civ_border_color="#98f2de"
-        android:layout_centerHorizontal="true"
         android:layout_margin="@dimen/_5sdp"
         />
 
@@ -35,7 +34,7 @@
                 android:id="@+id/contact_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Leonardo DiCaprio"
+                android:text="Any Event"
                 android:singleLine="true"
                 android:maxWidth="@dimen/_150sdp"
                 android:textColor="@color/md_grey_800"
@@ -46,7 +45,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_5sdp"
-                android:text="Feeling Bored"
+                android:text="Event Address"
                 android:singleLine="true"
                 android:maxWidth="@dimen/_150sdp"
                 android:textColor="@color/md_grey_900"
@@ -64,29 +63,26 @@
         android:orientation="horizontal">
 
         <com.waltado.lynknow.customViews.LatoFontHeavyTextView
-            android:layout_width="@dimen/_25sdp"
+            android:layout_width="@dimen/_30sdp"
             android:layout_height="wrap_content"
-            android:text="100%"
+            android:text="22/04"
             android:layout_gravity="center_vertical"
-            android:layout_marginRight="@dimen/_7sdp"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/_10sdp"
             android:singleLine="true"
             android:textColor="@color/md_grey_800"
-            android:textSize="@dimen/_8sdp"/>
+            android:textSize="@dimen/_9sdp"/>
 
-        <ImageView
-            android:layout_width="@dimen/_22sdp"
-            android:layout_height="@dimen/_22sdp"
-            android:layout_marginRight="@dimen/_7sdp"
-            android:adjustViewBounds="true"
-            android:src="@drawable/ic_man_walking"
-            android:layout_gravity="center_vertical"/>
 
-        <ImageView
-            android:layout_width="@dimen/_20sdp"
-            android:layout_height="@dimen/_20sdp"
-            android:layout_marginRight="@dimen/_5sdp"
-            android:adjustViewBounds="true"
-            android:src="@drawable/ic_toggle"
+        <com.waltado.lynknow.customViews.LatoFontHeavyTextView
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:textColor="@color/md_grey_800"
+            android:singleLine="true"
+            android:textSize="@dimen/_9sdp"
+            android:text="08.30 PM"
+            android:gravity="center"
             android:layout_gravity="right|center_vertical"/>
 
     </LinearLayout>

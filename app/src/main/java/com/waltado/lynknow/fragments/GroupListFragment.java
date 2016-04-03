@@ -28,7 +28,7 @@ public class GroupListFragment extends Fragment {
     private RecyclerView recyclerView;
     private boolean requestListBoolean;
     private ImageView titleIconView;
-    private LatoFontHeavyTextView titleTextView;
+    private LatoFontHeavyTextView titleTextView, buttonTitleView;
 
     public GroupListFragment() {
         // Required empty public constructor
@@ -39,10 +39,12 @@ public class GroupListFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        rootView = inflater.inflate(R.layout.fragment_recycler_view_with_title, container, false);
+        rootView = inflater.inflate(R.layout.fragment_recycler_view_with_title_button, container, false);
 
         titleIconView = (ImageView)rootView.findViewById(R.id.title_icon);
         titleTextView = (LatoFontHeavyTextView)rootView.findViewById(R.id.title_text);
+        buttonTitleView = (LatoFontHeavyTextView)rootView.findViewById(R.id.title_button);
+        buttonTitleView.setText("CREATE GROUP");
 
         recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
