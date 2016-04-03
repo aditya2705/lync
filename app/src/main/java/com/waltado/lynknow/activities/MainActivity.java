@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements SmartTabLayout.Ta
         fab_4 = R.drawable.ic_calendar_white;
 
         bottomSheetLayout = (BottomSheetLayout) findViewById(R.id.bottomsheet);
-        bottomSheetView = LayoutInflater.from(this).inflate(R.layout.custom_bottom_sheet, bottomSheetLayout, false);
+        bottomSheetView = LayoutInflater.from(this).inflate(R.layout.custom_bottom_sheet_main, bottomSheetLayout, false);
         bottomSheetView.findViewById(R.id.activity_view).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements SmartTabLayout.Ta
         bottomSheetView.findViewById(R.id.map_view).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, SelectActivity.class);
+                Intent intent = new Intent(MainActivity.this, MapActivity.class);
                 startActivity(intent);
             }
         });

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.flipboard.bottomsheet.BottomSheetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottomsheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/md_white_1000">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/map"/>
+
+                <include
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    layout="@layout/custom_map_marker"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="52dp"
+                    android:layout_marginStart="52dp"
+                    android:layout_marginTop="34dp"
+                    android:id="@+id/include" />
+
+
+                <include
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    layout="@layout/custom_map_marker"
+                    android:layout_alignTop="@+id/include"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/include4" />
+
+                <include
+                    layout="@layout/custom_map_marker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="84dp"
+                    android:id="@+id/include2"
+                    android:layout_below="@+id/include"
+                    android:layout_alignLeft="@+id/include"
+                    android:layout_alignStart="@+id/include" />
+
+                <include
+                    layout="@layout/custom_map_marker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/include3"
+                    android:layout_alignTop="@+id/include2"
+                    android:layout_toRightOf="@+id/include4"
+                    android:layout_toEndOf="@+id/include4" />
+
+                <include
+                    layout="@layout/custom_map_marker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="46dp"
+                    android:id="@+id/include5"
+                    android:layout_below="@+id/include2"
+                    android:layout_centerHorizontal="true" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/bottom_sheet_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/_15sdp"
+            app:backgroundTint="@color/appThemeColorDark"
+            android:src="@drawable/ic_plus" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+</com.flipboard.bottomsheet.BottomSheetLayout>

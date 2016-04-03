@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.waltado.lynknow.customViews.LatoFontHeavyTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/md_white_1000"
+            android:padding="@dimen/_7sdp"
+            android:background="@color/md_grey_700"
+            android:text="10"/>
+
+        <com.waltado.lynknow.customViews.LatoFontLightTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/md_white_1000"
+            android:padding="@dimen/_4sdp"
+            android:background="@drawable/rectangle_rounded_3"
+            android:layout_marginTop="@dimen/_minus5sdp"
+            android:text="9.5"/>
+
+        <ImageView
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_11sdp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/marker_pin"/>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
