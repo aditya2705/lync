@@ -2,6 +2,7 @@ package com.waltado.lynknow.activities;
 
 import android.content.Intent;
 import android.content.res.Resources;
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -10,7 +11,6 @@ import android.support.v4.view.MenuItemCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.AppCompatSeekBar;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
@@ -31,6 +31,8 @@ import com.waltado.lynknow.R;
 import com.waltado.lynknow.fragments.BlankFragment;
 import com.waltado.lynknow.fragments.ChatListFragment;
 import com.waltado.lynknow.fragments.ContactListFragment;
+import com.waltado.lynknow.fragments.EventListFragment;
+import com.waltado.lynknow.fragments.GroupListFragment;
 import com.waltado.lynknow.fragments.LKMListFragment;
 
 public class MainActivity extends AppCompatActivity implements SmartTabLayout.TabProvider{
@@ -46,8 +48,9 @@ public class MainActivity extends AppCompatActivity implements SmartTabLayout.Ta
     private LKMListFragment lkmFragment;
     private ContactListFragment contactListFragment;
     private ChatListFragment chatListFragment;
-    private Fragment groupListFragment,eventListFragment;
-    private boolean contactRequestBoolean = false, chatRequestBoolean = false, groupRequestBoolean = false;
+    private GroupListFragment groupListFragment;
+    private EventListFragment eventListFragment;
+    private boolean contactRequestBoolean = false, chatRequestBoolean = false, groupRequestBoolean = false, eventAlternateBoolean = false;
     private int fab_0,fab_1,fab_2,fab_3,fab_4;
 
 
@@ -61,7 +64,13 @@ public class MainActivity extends AppCompatActivity implements SmartTabLayout.Ta
         fab_1 = R.drawable.ic_person_add_white;
         fab_2 = R.drawable.ic_ping_white;
         fab_3 = R.drawable.ic_group_add_white;
-        fab_4 = R.drawable.ic_calendar_white;
+        fab_4 = R.drawable.ic_event_invitation_white;
+
+        lkmFragment = new LKMListFragment();
+        contactListFragment = new ContactListFragment();
+        chatListFragment = new ChatListFragment();
+        groupListFragment = new GroupListFragment();
+        eventListFragment = new EventListFragment();
 
         bottomSheetLayout = (BottomSheetLayout) findViewById(R.id.bottomsheet);
         bottomSheetView = LayoutInflater.from(this).inflate(R.layout.custom_bottom_sheet_main, bottomSheetLayout, false);
@@ -128,10 +137,6 @@ public class MainActivity extends AppCompatActivity implements SmartTabLayout.Ta
 
         SmartTabLayout viewPagerTab = (SmartTabLayout) findViewById(R.id.main_tabs);
 
-        lkmFragment = new LKMListFragment();
-        contactListFragment = new ContactListFragment();
-        chatListFragment = new ChatListFragment();
-
         adapter = new MainTabAdapter(getSupportFragmentManager());
         mainPager.setAdapter(adapter);
 
@@ -189,7 +194,7 @@ public class MainActivity extends AppCompatActivity implements SmartTabLayout.Ta
                         floatingActionButton.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-
+                                toggleEventInvitationList();
                             }
                         });
                         break;
@@ -208,6 +213,8 @@ public class MainActivity extends AppCompatActivity implements SmartTabLayout.Ta
 
 
     }
+
+
 
     @Override
     public View createTabView(ViewGroup container, int position, PagerAdapter adapter) {
@@ -264,9 +271,9 @@ public class MainActivity extends AppCompatActivity implements SmartTabLayout.Ta
                 case 2:
                     return chatListFragment;
                 case 3:
-                    return new BlankFragment();
+                    return groupListFragment;
                 case 4:
-                    return new BlankFragment();
+                    return eventListFragment;
                 default:
                     return new BlankFragment();
             }
@@ -339,7 +346,18 @@ public class MainActivity extends AppCompatActivity implements SmartTabLayout.Ta
         return super.onOptionsItemSelected(item);
     }
 
-    private void toggleGroupRequestList() {
+    private void toggleContactRequestList() {
+
+        if(contactRequestBoolean){
+            fab_1 = R.drawable.ic_person_add_white;
+            contactRequestBoolean = false;
+        }else{
+            fab_1 = R.drawable.ic_person_white;
+            contactRequestBoolean = true;
+        }
+        floatingActionButton.setImageResource(fab_1);
+
+        contactListFragment.toggleRequestList();
 
     }
 
@@ -358,18 +376,33 @@ public class MainActivity extends AppCompatActivity implements SmartTabLayout.Ta
 
     }
 
-    private void toggleContactRequestList() {
+    private void toggleGroupRequestList() {
 
-        if(contactRequestBoolean){
-            fab_1 = R.drawable.ic_person_add_white;
-            contactRequestBoolean = false;
+        if(groupRequestBoolean){
+            fab_3 = R.drawable.ic_group_add_white;
+            groupRequestBoolean = false;
         }else{
-            fab_1 = R.drawable.ic_person_white;
-            contactRequestBoolean = true;
+            fab_3 = R.drawable.ic_group_white;
+            groupRequestBoolean = true;
         }
-        floatingActionButton.setImageResource(fab_1);
+        floatingActionButton.setImageResource(fab_3);
 
-        contactListFragment.toggleRequestList();
+        groupListFragment.toggleRequestList();
+
+    }
+
+    private void toggleEventInvitationList() {
+
+        if(eventAlternateBoolean){
+            fab_4 = R.drawable.ic_event_invitation_white;
+            eventAlternateBoolean = false;
+        }else{
+            fab_4 = R.drawable.ic_event_white;
+            eventAlternateBoolean = true;
+        }
+        floatingActionButton.setImageResource(fab_4);
+
+        eventListFragment.toggleRequestList();
 
     }
 

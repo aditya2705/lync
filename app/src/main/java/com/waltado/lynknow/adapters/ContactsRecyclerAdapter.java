@@ -1,9 +1,5 @@
 package com.waltado.lynknow.adapters;
 
-/**
- * Created by SHWETHA on 26-02-2016.
- */
-
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -15,9 +11,7 @@ import com.waltado.lynknow.objects.ContactCustomObject;
 
 import java.util.ArrayList;
 
-/**
- * Created by SHWETHA on 24-02-2016.
- */
+
 public class ContactsRecyclerAdapter extends RecyclerView.Adapter<ContactsCustomViewHolder> {
 
     private Context context;

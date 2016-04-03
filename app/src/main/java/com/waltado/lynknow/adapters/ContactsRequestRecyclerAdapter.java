@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.waltado.lynknow.R;
-import com.waltado.lynknow.objects.ContactCustomObject;
 import com.waltado.lynknow.objects.ContactRequestCustomObject;
 
 import java.util.ArrayList;

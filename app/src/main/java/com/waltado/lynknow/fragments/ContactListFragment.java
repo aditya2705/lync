@@ -47,21 +47,8 @@ public class ContactListFragment extends Fragment {
         recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
 
-        ArrayList<ContactCustomObject> contactCustomObjectArrayList = new ArrayList<>();
-        contactCustomObjectArrayList.add(new ContactCustomObject());
-        contactCustomObjectArrayList.add(new ContactCustomObject());
-        contactCustomObjectArrayList.add(new ContactCustomObject());
-        contactCustomObjectArrayList.add(new ContactCustomObject());
-        contactCustomObjectArrayList.add(new ContactCustomObject());
-        contactCustomObjectArrayList.add(new ContactCustomObject());
-        contactCustomObjectArrayList.add(new ContactCustomObject());
-        contactCustomObjectArrayList.add(new ContactCustomObject());
-        contactCustomObjectArrayList.add(new ContactCustomObject());
-
-        ContactsRecyclerAdapter adapter = new ContactsRecyclerAdapter(getActivity(), contactCustomObjectArrayList);
-        recyclerView.setAdapter(adapter);
-        titleTextView.setText("Friends");
-        titleIconView.setImageResource(R.drawable.ic_person_theme);
+        requestListBoolean = true;
+        toggleRequestList();
 
 
 

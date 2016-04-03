@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/selectableItemBackground"
+    android:padding="@dimen/_5sdp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/icon"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:src="@drawable/dicaprio"
+        app:civ_border_width="@dimen/_3sdp"
+        app:civ_border_color="#98f2de"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/_5sdp"
+        />
+
+        <LinearLayout
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <com.waltado.lynknow.customViews.LatoFontHeavyTextView
+                android:id="@+id/contact_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Leonardo DiCaprio"
+                android:singleLine="true"
+                android:maxWidth="@dimen/_150sdp"
+                android:textColor="@color/md_grey_800"
+                android:textSize="@dimen/_12sdp"/>
+
+            <com.waltado.lynknow.customViews.LatoFontLightTextView
+                android:id="@+id/contact_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="Feeling Bored"
+                android:singleLine="true"
+                android:maxWidth="@dimen/_150sdp"
+                android:textColor="@color/md_grey_900"
+                android:textSize="@dimen/_10sdp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal">
+
+        <com.waltado.lynknow.customViews.LatoFontHeavyTextView
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="wrap_content"
+            android:text="100%"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/_7sdp"
+            android:singleLine="true"
+            android:textColor="@color/md_grey_800"
+            android:textSize="@dimen/_8sdp"/>
+
+        <ImageView
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:layout_marginRight="@dimen/_7sdp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_man_walking"
+            android:layout_gravity="center_vertical"/>
+
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_toggle"
+            android:layout_gravity="right|center_vertical"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

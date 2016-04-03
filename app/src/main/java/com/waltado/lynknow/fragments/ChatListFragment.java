@@ -12,13 +12,9 @@ import android.widget.ImageView;
 
 import com.waltado.lynknow.R;
 import com.waltado.lynknow.adapters.ChatsRecyclerAdapter;
-import com.waltado.lynknow.adapters.ContactsRecyclerAdapter;
-import com.waltado.lynknow.adapters.ContactsRequestRecyclerAdapter;
 import com.waltado.lynknow.adapters.PingsRecyclerAdapter;
 import com.waltado.lynknow.customViews.LatoFontHeavyTextView;
 import com.waltado.lynknow.objects.ChatCustomObject;
-import com.waltado.lynknow.objects.ContactCustomObject;
-import com.waltado.lynknow.objects.ContactRequestCustomObject;
 import com.waltado.lynknow.objects.PingCustomObject;
 
 import java.util.ArrayList;
@@ -51,22 +47,8 @@ public class ChatListFragment extends Fragment {
         recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
 
-        ArrayList<ChatCustomObject> chatCustomObjectArrayList = new ArrayList<>();
-        chatCustomObjectArrayList.add(new ChatCustomObject());
-        chatCustomObjectArrayList.add(new ChatCustomObject());
-        chatCustomObjectArrayList.add(new ChatCustomObject());
-        chatCustomObjectArrayList.add(new ChatCustomObject());
-        chatCustomObjectArrayList.add(new ChatCustomObject());
-        chatCustomObjectArrayList.add(new ChatCustomObject());
-        chatCustomObjectArrayList.add(new ChatCustomObject());
-        chatCustomObjectArrayList.add(new ChatCustomObject());
-        chatCustomObjectArrayList.add(new ChatCustomObject());
-
-        ChatsRecyclerAdapter adapter = new ChatsRecyclerAdapter(getActivity(), chatCustomObjectArrayList);
-
-        recyclerView.setAdapter(adapter);
-        titleTextView.setText("Chats");
-        titleIconView.setImageResource(R.drawable.ic_chat_theme);
+        requestListBoolean = true;
+        toggleRequestList();
 
 
 
