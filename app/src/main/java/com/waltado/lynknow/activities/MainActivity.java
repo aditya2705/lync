@@ -43,6 +43,12 @@ public class MainActivity extends AppCompatActivity implements SmartTabLayout.Ta
     private FloatingActionButton floatingActionButton;
     private AppCompatSeekBar bottomSheetSeekBar;
     private TextView seekBarPopupTextView;
+    private LKMListFragment lkmFragment;
+    private ContactListFragment contactListFragment;
+    private ChatListFragment chatListFragment;
+    private Fragment groupListFragment,eventListFragment;
+    private boolean contactRequestBoolean = false, chatRequestBoolean = false, groupRequestBoolean = false;
+    private int fab_0,fab_1,fab_2,fab_3,fab_4;
 
 
     @Override
@@ -51,6 +57,11 @@ public class MainActivity extends AppCompatActivity implements SmartTabLayout.Ta
         setContentView(R.layout.activity_main);
 
         floatingActionButton = (FloatingActionButton)findViewById(R.id.bottom_sheet_fab);
+        fab_0 = R.drawable.ic_plus;
+        fab_1 = R.drawable.ic_person_add_white;
+        fab_2 = R.drawable.ic_ping_white;
+        fab_3 = R.drawable.ic_group_add_white;
+        fab_4 = R.drawable.ic_calendar_white;
 
         bottomSheetLayout = (BottomSheetLayout) findViewById(R.id.bottomsheet);
         bottomSheetView = LayoutInflater.from(this).inflate(R.layout.custom_bottom_sheet, bottomSheetLayout, false);
@@ -117,6 +128,10 @@ public class MainActivity extends AppCompatActivity implements SmartTabLayout.Ta
 
         SmartTabLayout viewPagerTab = (SmartTabLayout) findViewById(R.id.main_tabs);
 
+        lkmFragment = new LKMListFragment();
+        contactListFragment = new ContactListFragment();
+        chatListFragment = new ChatListFragment();
+
         adapter = new MainTabAdapter(getSupportFragmentManager());
         mainPager.setAdapter(adapter);
 
@@ -134,7 +149,7 @@ public class MainActivity extends AppCompatActivity implements SmartTabLayout.Ta
 
                 switch (position) {
                     case 0:
-                        floatingActionButton.setImageResource(R.drawable.ic_plus);
+                        floatingActionButton.setImageResource(fab_0);
                         floatingActionButton.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
@@ -143,38 +158,38 @@ public class MainActivity extends AppCompatActivity implements SmartTabLayout.Ta
                         });
                         break;
                     case 1:
-                        floatingActionButton.setImageResource(R.drawable.ic_person_white);
+                        floatingActionButton.setImageResource(fab_1);
                         floatingActionButton.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                bottomSheetLayout.showWithSheetView(bottomSheetView);
+                                toggleContactRequestList();
                             }
                         });
                         break;
                     case 2:
-                        floatingActionButton.setImageResource(R.drawable.ic_chat_white);
+                        floatingActionButton.setImageResource(fab_2);
                         floatingActionButton.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                bottomSheetLayout.showWithSheetView(bottomSheetView);
+                                togglePingList();
                             }
                         });
                         break;
                     case 3:
-                        floatingActionButton.setImageResource(R.drawable.ic_group_white);
+                        floatingActionButton.setImageResource(fab_3);
                         floatingActionButton.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                bottomSheetLayout.showWithSheetView(bottomSheetView);
+                                toggleGroupRequestList();
                             }
                         });
                         break;
                     case 4:
-                        floatingActionButton.setImageResource(R.drawable.ic_calendar_white);
+                        floatingActionButton.setImageResource(fab_4);
                         floatingActionButton.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                bottomSheetLayout.showWithSheetView(bottomSheetView);
+
                             }
                         });
                         break;
@@ -243,11 +258,11 @@ public class MainActivity extends AppCompatActivity implements SmartTabLayout.Ta
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    return new LKMListFragment();
+                    return lkmFragment;
                 case 1:
-                    return new ContactListFragment();
+                    return contactListFragment;
                 case 2:
-                    return new ChatListFragment();
+                    return chatListFragment;
                 case 3:
                     return new BlankFragment();
                 case 4:
@@ -322,6 +337,40 @@ public class MainActivity extends AppCompatActivity implements SmartTabLayout.Ta
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void toggleGroupRequestList() {
+
+    }
+
+    private void togglePingList() {
+
+        if(chatRequestBoolean){
+            fab_2 = R.drawable.ic_ping_white;
+            chatRequestBoolean = false;
+        }else{
+            fab_2 = R.drawable.ic_chat_white;
+            chatRequestBoolean = true;
+        }
+        floatingActionButton.setImageResource(fab_2);
+
+        chatListFragment.toggleRequestList();
+
+    }
+
+    private void toggleContactRequestList() {
+
+        if(contactRequestBoolean){
+            fab_1 = R.drawable.ic_person_add_white;
+            contactRequestBoolean = false;
+        }else{
+            fab_1 = R.drawable.ic_person_white;
+            contactRequestBoolean = true;
+        }
+        floatingActionButton.setImageResource(fab_1);
+
+        contactListFragment.toggleRequestList();
+
     }
 
 }

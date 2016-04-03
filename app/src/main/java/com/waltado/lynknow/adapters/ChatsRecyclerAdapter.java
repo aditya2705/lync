@@ -21,7 +21,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 /**
  * Created by SHWETHA on 24-02-2016.
  */
-public class ChatsRecyclerAdapter extends RecyclerView.Adapter<ContactsCustomViewHolder> {
+public class ChatsRecyclerAdapter extends RecyclerView.Adapter<ChatsCustomViewHolder> {
 
     private Context context;
     private ArrayList<ChatCustomObject> customObjectArrayList;
@@ -32,14 +32,14 @@ public class ChatsRecyclerAdapter extends RecyclerView.Adapter<ContactsCustomVie
     }
 
     @Override
-    public ContactsCustomViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ChatsCustomViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.custom_chat_item, parent, false);
-        ContactsCustomViewHolder customViewHolder = new ContactsCustomViewHolder(v);
+        ChatsCustomViewHolder customViewHolder = new ChatsCustomViewHolder(v);
         return customViewHolder;
     }
 
     @Override
-    public void onBindViewHolder(ContactsCustomViewHolder holder, int position) {
+    public void onBindViewHolder(ChatsCustomViewHolder holder, int position) {
         ChatCustomObject customObject = customObjectArrayList.get(position);
     }
 
@@ -51,15 +51,8 @@ public class ChatsRecyclerAdapter extends RecyclerView.Adapter<ContactsCustomVie
 
 class ChatsCustomViewHolder extends RecyclerView.ViewHolder {
 
-    public TextView titleTextView, descriptionTextView, timeTextView;
-    public CircleImageView imageView;
-
     public ChatsCustomViewHolder(View itemView) {
         super(itemView);
-        titleTextView = (TextView) itemView.findViewById(R.id.contact_title);
-        descriptionTextView = (TextView) itemView.findViewById(R.id.contact_description);
-        timeTextView = (TextView) itemView.findViewById(R.id.time_text);
-        imageView = (CircleImageView) itemView.findViewById(R.id.image);
     }
 }
 
