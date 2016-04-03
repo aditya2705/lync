@@ -11,6 +11,7 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.AppCompatSeekBar;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
@@ -18,12 +19,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.SeekBar;
+import android.widget.TextView;
 
 import com.flipboard.bottomsheet.BottomSheetLayout;
 import com.ogaclejapan.smarttablayout.SmartTabLayout;
 import com.waltado.lynknow.R;
 import com.waltado.lynknow.fragments.BlankFragment;
+import com.waltado.lynknow.fragments.ChatListFragment;
 import com.waltado.lynknow.fragments.ContactListFragment;
 import com.waltado.lynknow.fragments.LKMListFragment;
 
@@ -35,6 +41,8 @@ public class MainActivity extends AppCompatActivity implements SmartTabLayout.Ta
     private View bottomSheetView;
     private BottomSheetLayout bottomSheetLayout;
     private FloatingActionButton floatingActionButton;
+    private AppCompatSeekBar bottomSheetSeekBar;
+    private TextView seekBarPopupTextView;
 
 
     @Override
@@ -65,6 +73,39 @@ public class MainActivity extends AppCompatActivity implements SmartTabLayout.Ta
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, SelectActivity.class);
                 startActivity(intent);
+            }
+        });
+        bottomSheetView.findViewById(R.id.cross_icon).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bottomSheetLayout.dismissSheet();
+            }
+        });
+        bottomSheetSeekBar = (AppCompatSeekBar) bottomSheetView.findViewById(R.id.seekBar);
+        seekBarPopupTextView = (TextView)bottomSheetView.findViewById(R.id.seekBar_text);
+        bottomSheetSeekBar.setMax(100);
+        bottomSheetSeekBar.setProgress(0);
+        bottomSheetSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                seekBarPopupTextView.setText(String.valueOf(progress));
+                seekBarPopupTextView.setVisibility(View.VISIBLE);
+                final Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.fade_in);
+                seekBarPopupTextView.startAnimation(animation);
+
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                final Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.fade_out);
+                seekBarPopupTextView.startAnimation(animation);
+                seekBarPopupTextView.setVisibility(View.INVISIBLE);
             }
         });
 
@@ -204,9 +245,9 @@ public class MainActivity extends AppCompatActivity implements SmartTabLayout.Ta
                 case 0:
                     return new LKMListFragment();
                 case 1:
-                    return new BlankFragment();
-                case 2:
                     return new ContactListFragment();
+                case 2:
+                    return new ChatListFragment();
                 case 3:
                     return new BlankFragment();
                 case 4:

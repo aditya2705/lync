@@ -9,14 +9,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.waltado.lynknow.R;
 import com.waltado.lynknow.objects.ContactCustomObject;
 
 import java.util.ArrayList;
-
-import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
  * Created by SHWETHA on 24-02-2016.
@@ -51,15 +48,9 @@ public class ContactsRecyclerAdapter extends RecyclerView.Adapter<ContactsCustom
 
 class ContactsCustomViewHolder extends RecyclerView.ViewHolder {
 
-    public TextView titleTextView, descriptionTextView, timeTextView;
-    public CircleImageView imageView;
 
     public ContactsCustomViewHolder(View itemView) {
         super(itemView);
-        titleTextView = (TextView) itemView.findViewById(R.id.contact_title);
-        descriptionTextView = (TextView) itemView.findViewById(R.id.contact_description);
-        timeTextView = (TextView) itemView.findViewById(R.id.time_text);
-        imageView = (CircleImageView) itemView.findViewById(R.id.image);
     }
 }
 

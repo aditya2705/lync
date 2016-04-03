@@ -1,113 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/_10sdp"
     android:background="@color/appThemeColor">
-
-    <com.waltado.lynknow.customViews.LatoFontHeavyTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginLeft="@dimen/_20sdp"
-        android:layout_marginRight="@dimen/_20sdp"
-        android:gravity="center"
-        android:textColor="@color/md_white_1000"
-        android:text="Itachi Uchiha is by far the greatest anime character ever"
-        android:textSize="@dimen/_11sdp"/>
-
-    <android.support.v7.widget.AppCompatSeekBar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/_20sdp"
-        android:layout_marginRight="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:theme="@style/SeekBarStyle"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:orientation="horizontal">
+        android:padding="@dimen/_20sdp"
+        android:orientation="vertical">
+
+        <com.waltado.lynknow.customViews.LatoFontHeavyTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:gravity="center"
+            android:textColor="@color/md_white_1000"
+            android:text="Itachi Uchiha is by far the greatest anime character ever"
+            android:textSize="@dimen/_11sdp"/>
+
+        <RelativeLayout
+            android:layout_width="@dimen/_240sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginLeft="@dimen/_35sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_gravity="center_horizontal">
+
+            <android.support.v7.widget.AppCompatSeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:theme="@style/SeekBarStyle"/>
+
+            <TextView
+                android:id="@+id/seekBar_text"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:text="100"
+                android:padding="@dimen/_3sdp"
+                android:background="@drawable/rectangle_rounded_2"
+                android:textColor="@color/appThemeColorDark"
+                android:textStyle="bold"
+                android:textSize="@dimen/_8sdp"
+                android:layout_toRightOf="@id/seekBar"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_centerVertical="true"
+                android:visibility="invisible"
+                android:gravity="center"/>
+
+        </RelativeLayout>
 
         <LinearLayout
-            android:id="@+id/activity_view"
-            android:orientation="vertical"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:padding="@dimen/_5sdp"
-            android:background="?attr/selectableItemBackground">
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="@dimen/_30sdp"
-                android:layout_height="@dimen/_30sdp"
-                android:adjustViewBounds="true"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/ic_man_walking_white"/>
-
-            <com.waltado.lynknow.customViews.LatoFontHeavyTextView
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:id="@+id/activity_view"
+                android:orientation="vertical"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:textColor="@color/md_white_1000"
-                android:textSize="@dimen/_11sdp"
-                android:text="Activities"/>
+                android:layout_weight="1"
+                android:padding="@dimen/_5sdp"
+                android:background="?attr/selectableItemBackground">
 
-        </LinearLayout>
+                <ImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:adjustViewBounds="true"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_man_walking_white"/>
 
-        <LinearLayout
-            android:id="@+id/map_view"
-            android:orientation="vertical"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:padding="@dimen/_5sdp"
-            android:background="?attr/selectableItemBackground">
+                <com.waltado.lynknow.customViews.LatoFontHeavyTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textColor="@color/md_white_1000"
+                    android:textSize="@dimen/_11sdp"
+                    android:text="Activities"/>
 
-            <ImageView
-                android:layout_width="@dimen/_30sdp"
-                android:layout_height="@dimen/_30sdp"
-                android:adjustViewBounds="true"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/ic_map_white"/>
+            </LinearLayout>
 
-            <com.waltado.lynknow.customViews.LatoFontHeavyTextView
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:id="@+id/map_view"
+                android:orientation="vertical"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:textColor="@color/md_white_1000"
-                android:textSize="@dimen/_11sdp"
-                android:text="Map"/>
+                android:layout_weight="1"
+                android:padding="@dimen/_5sdp"
+                android:background="?attr/selectableItemBackground">
 
-        </LinearLayout>
+                <ImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:adjustViewBounds="true"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_map_white"/>
 
-        <LinearLayout
-            android:id="@+id/status_view"
-            android:orientation="vertical"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:padding="@dimen/_5sdp"
-            android:background="?attr/selectableItemBackground">
+                <com.waltado.lynknow.customViews.LatoFontHeavyTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textColor="@color/md_white_1000"
+                    android:textSize="@dimen/_11sdp"
+                    android:text="Map"/>
 
-            <ImageView
-                android:layout_width="@dimen/_30sdp"
-                android:layout_height="@dimen/_30sdp"
-                android:adjustViewBounds="true"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/ic_edit_white"/>
+            </LinearLayout>
 
-            <com.waltado.lynknow.customViews.LatoFontHeavyTextView
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:id="@+id/status_view"
+                android:orientation="vertical"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:textColor="@color/md_white_1000"
-                android:textSize="@dimen/_11sdp"
-                android:text="Status"/>
+                android:layout_weight="1"
+                android:padding="@dimen/_5sdp"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:adjustViewBounds="true"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_edit_white"/>
+
+                <com.waltado.lynknow.customViews.LatoFontHeavyTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textColor="@color/md_white_1000"
+                    android:textSize="@dimen/_11sdp"
+                    android:text="Status"/>
+
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -115,6 +146,16 @@
 
     </LinearLayout>
 
+    <ImageView
+        android:id="@+id/cross_icon"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:adjustViewBounds="true"
+        android:layout_alignParentRight="true"
+        android:padding="@dimen/_11sdp"
+        android:src="@drawable/ic_cross_white"
+        android:background="?attr/selectableItemBackground"/>
 
 
-</LinearLayout>
+
+</RelativeLayout>
