@@ -65,7 +65,7 @@
             android:textSize="@dimen/_14sdp"
             android:layout_marginTop="@dimen/_10sdp"
             android:textColor="@color/md_grey_500"
-            android:text="Studying" />
+            android:text="Education" />
 
         <com.waltado.lynknow.customViews.LatoFontLightTextView
             android:layout_width="match_parent"

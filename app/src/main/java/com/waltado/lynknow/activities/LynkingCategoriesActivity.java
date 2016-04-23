@@ -85,7 +85,7 @@ public class LynkingCategoriesActivity extends AppCompatActivity {
                 int position = viewArrayList.indexOf(v);
                 Log.d("CLICKED", "" + position);
                 if (expandableLayoutArrayList.get(position).isExpanded()) {
-                    arrowArrayList.get(position).setBackgroundResource(R.drawable.ic_arrow_right_grey);
+                    arrowArrayList.get(position).setBackgroundResource(R.drawable.ic_arrow_down_grey);
                 } else {
                     arrowArrayList.get(position).setBackgroundResource(R.drawable.ic_arrow_down_grey);
                 }
@@ -111,7 +111,7 @@ public class LynkingCategoriesActivity extends AppCompatActivity {
                 int position = viewArrayList.indexOf(v);
                 Log.d("CLICKED", "" + position);
                 if (expandableLayoutArrayList.get(position).isExpanded()) {
-                    arrowArrayList.get(position).setBackgroundResource(R.drawable.ic_arrow_right_grey);
+                    arrowArrayList.get(position).setBackgroundResource(R.drawable.ic_arrow_down_grey);
                 } else {
                     arrowArrayList.get(position).setBackgroundResource(R.drawable.ic_arrow_down_grey);
                 }
@@ -137,7 +137,7 @@ public class LynkingCategoriesActivity extends AppCompatActivity {
                 int position = viewArrayList.indexOf(v);
                 Log.d("CLICKED", "" + position);
                 if (expandableLayoutArrayList.get(position).isExpanded()) {
-                    arrowArrayList.get(position).setBackgroundResource(R.drawable.ic_arrow_right_grey);
+                    arrowArrayList.get(position).setBackgroundResource(R.drawable.ic_arrow_down_grey);
                 } else {
                     arrowArrayList.get(position).setBackgroundResource(R.drawable.ic_arrow_down_grey);
                 }
@@ -164,7 +164,7 @@ public class LynkingCategoriesActivity extends AppCompatActivity {
                 int position = viewArrayList.indexOf(v);
                 Log.d("CLICKED", "" + position);
                 if (expandableLayoutArrayList.get(position).isExpanded()) {
-                    arrowArrayList.get(position).setBackgroundResource(R.drawable.ic_arrow_right_grey);
+                    arrowArrayList.get(position).setBackgroundResource(R.drawable.ic_arrow_down_grey);
                 } else {
                     arrowArrayList.get(position).setBackgroundResource(R.drawable.ic_arrow_down_grey);
                 }
@@ -193,7 +193,7 @@ public class LynkingCategoriesActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_register) {
+        if (id == R.id.action_settings) {
             return true;
         }
 

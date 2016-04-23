@@ -1,6 +1,7 @@
 package com.waltado.lynknow.activities;
 
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -8,9 +9,10 @@ import android.view.MenuItem;
 
 import com.waltado.lynknow.R;
 
-public class SelectActivity extends AppCompatActivity {
+public class GroupDetailsActivity extends AppCompatActivity {
 
     private Toolbar mToolbar;
+    private FloatingActionButton floatingActionButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +38,7 @@ public class SelectActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_register) {
+        if (id == R.id.action_settings) {
             return true;
         }
 

@@ -5,19 +5,19 @@ package com.waltado.lynknow.adapters;
  */
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.waltado.lynknow.R;
 import com.waltado.lynknow.objects.ChatCustomObject;
 
 import java.util.ArrayList;
+import java.util.Random;
 
-/**
- * Created by SHWETHA on 24-02-2016.
- */
 public class ChatsRecyclerAdapter extends RecyclerView.Adapter<ChatsCustomViewHolder> {
 
     private Context context;
@@ -38,6 +38,14 @@ public class ChatsRecyclerAdapter extends RecyclerView.Adapter<ChatsCustomViewHo
     @Override
     public void onBindViewHolder(ChatsCustomViewHolder holder, int position) {
         ChatCustomObject customObject = customObjectArrayList.get(position);
+        Random random = new Random();
+        if(position<=1){
+            holder.timeTextView.setTextColor(context.getResources().getColor(R.color.appThemeColorDark));
+            holder.timeTextView.setTypeface(Typeface.DEFAULT_BOLD);
+            holder.messageBadgeView.setVisibility(View.VISIBLE);
+        }else {
+            holder.messageBadgeView.setVisibility(View.INVISIBLE);
+        }
     }
 
     @Override
@@ -48,8 +56,12 @@ public class ChatsRecyclerAdapter extends RecyclerView.Adapter<ChatsCustomViewHo
 
 class ChatsCustomViewHolder extends RecyclerView.ViewHolder {
 
+    public TextView messageBadgeView, timeTextView;
+
     public ChatsCustomViewHolder(View itemView) {
         super(itemView);
+        messageBadgeView = (TextView)itemView.findViewById(R.id.message_badge);
+        timeTextView = (TextView)itemView.findViewById(R.id.time_text);
     }
 }
 

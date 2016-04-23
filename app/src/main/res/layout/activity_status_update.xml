@@ -23,7 +23,7 @@
     <com.waltado.lynknow.customViews.LatoFontHeavyTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/md_grey_800"
+        android:textColor="@color/appThemeColorDark"
         android:text="Status"
         android:textSize="@dimen/_12sdp"/>
 
@@ -76,8 +76,7 @@
                     android:textSize="@dimen/_12sdp"
                     android:textColorHint="@color/appThemeColor"
                     android:textColor="@color/appThemeColorDark"
-                    android:background="@android:color/transparent"
-                    android:textStyle="italic"/>
+                    android:background="@android:color/transparent" />
 
             </RelativeLayout>
 
@@ -87,7 +86,7 @@
         <com.waltado.lynknow.customViews.LatoFontHeavyTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/md_grey_800"
+            android:textColor="@color/appThemeColorDark"
             android:text="Currently Doing"
             android:textSize="@dimen/_12sdp"/>
 
@@ -226,7 +225,7 @@
         <com.waltado.lynknow.customViews.LatoFontHeavyTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/md_grey_800"
+            android:textColor="@color/appThemeColorDark"
             android:text="Where"
             android:textSize="@dimen/_12sdp"/>
 
@@ -258,7 +257,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Mumbai, Maharashtra, India"
-                    android:textColor="@color/md_grey_700"
+                    android:textColor="@color/appThemeColorDark"
                     android:layout_centerInParent="true"
                     android:layout_marginLeft="@dimen/_10sdp"
                     android:textSize="@dimen/_12sdp"/>
@@ -273,7 +272,7 @@
         <com.waltado.lynknow.customViews.LatoFontHeavyTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/md_grey_800"
+            android:textColor="@color/appThemeColorDark"
             android:text="Mood"
             android:textSize="@dimen/_12sdp"/>
 
@@ -308,7 +307,7 @@
                     android:layout_centerVertical="true"
                     android:src="@drawable/ic_arrow_right_grey"
                     android:layout_alignParentRight="true"
-                    android:background="?attr/selectableItemBackground"
+                    android:background="@drawable/transparent_selector"
                     />
 
                 <ImageView
@@ -319,7 +318,7 @@
                     android:layout_centerVertical="true"
                     android:src="@drawable/ic_arrow_left_grey"
                     android:layout_alignParentLeft="true"
-                    android:background="?attr/selectableItemBackground"
+                    android:background="@drawable/transparent_selector"
                     />
 
             </RelativeLayout>

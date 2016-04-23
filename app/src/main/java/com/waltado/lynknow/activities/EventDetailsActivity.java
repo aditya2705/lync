@@ -1,37 +1,26 @@
 package com.waltado.lynknow.activities;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
 import com.waltado.lynknow.R;
 
-public class UserInfoActivity extends AppCompatActivity {
+public class EventDetailsActivity extends AppCompatActivity {
 
     private Toolbar mToolbar;
+    private FloatingActionButton floatingActionButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_info);
+        setContentView(R.layout.activity_select);
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-
-        findViewById(R.id.forward_fab).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(UserInfoActivity.this, LynkingCategoriesActivity.class);
-                startActivity(intent);
-            }
-        });
-
-
     }
 
     @Override

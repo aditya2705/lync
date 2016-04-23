@@ -15,7 +15,7 @@
         android:actionLayout="@layout/menu_switch_layout"
         app:showAsAction="always"/>
 
-    <item android:id="@+id/action_register"
+    <item android:id="@+id/action_settings"
         android:title="Register Screen"
         app:showAsAction="never" />
 

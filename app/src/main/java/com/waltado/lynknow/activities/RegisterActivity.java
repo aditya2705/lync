@@ -19,6 +19,7 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+
         ((LatoFontLightTextView)findViewById(R.id.proceedView)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -31,7 +32,7 @@ public class RegisterActivity extends AppCompatActivity {
         countryCodeSpinner = (AppCompatSpinner)findViewById(R.id.country_code_spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.country_codes, R.layout.register_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(R.layout.register_spinner_item);
         // Apply the adapter to the spinner
         countryCodeSpinner.setAdapter(adapter);
 

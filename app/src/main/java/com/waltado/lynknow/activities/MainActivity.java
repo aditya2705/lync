@@ -19,8 +19,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -77,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements SmartTabLayout.Ta
         bottomSheetView.findViewById(R.id.activity_view).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, SelectActivity.class);
+                Intent intent = new Intent(MainActivity.this, ActivitySelectActivity.class);
                 startActivity(intent);
             }
         });
@@ -109,23 +107,15 @@ public class MainActivity extends AppCompatActivity implements SmartTabLayout.Ta
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 seekBarPopupTextView.setText(String.valueOf(progress));
-                seekBarPopupTextView.setVisibility(View.VISIBLE);
-                final Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.fade_in);
-                seekBarPopupTextView.startAnimation(animation);
 
             }
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-
-
             }
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-                final Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.fade_out);
-                seekBarPopupTextView.startAnimation(animation);
-                seekBarPopupTextView.setVisibility(View.INVISIBLE);
             }
         });
 
@@ -297,7 +287,7 @@ public class MainActivity extends AppCompatActivity implements SmartTabLayout.Ta
         int id = item.getItemId();
         Intent intent;
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_register) {
+        if (id == R.id.action_settings) {
             this.finish();
             return true;
         }else if(id == R.id.menu_1){
@@ -307,7 +297,7 @@ public class MainActivity extends AppCompatActivity implements SmartTabLayout.Ta
             startActivity(intent);
             return true;
         }else if(id == R.id.menu_3){
-            intent = new Intent(MainActivity.this,SelectActivity.class);
+            intent = new Intent(MainActivity.this,ActivitySelectActivity.class);
             startActivity(intent);
             return true;
         }else if(id == R.id.menu_4){

@@ -53,37 +53,34 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_10sdp"
                     android:orientation="horizontal">
 
                     <com.waltado.lynknow.customViews.LatoFontLightTextView
                         android:id="@+id/profile_person_name"
-                        android:layout_width="wrap_content"
+                        android:layout_width="@dimen/_120sdp"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:textColor="@color/md_white_1000"
-                        android:layout_marginTop="@dimen/_10sdp"
                         android:text="Leonardo Di Caprio"
-                        android:singleLine="true"
                         android:textSize="@dimen/_14sdp"/>
 
-                    <com.waltado.lynknow.customViews.LatoFontHeavyTextView
+                    <com.waltado.lynknow.customViews.LatoFontLightTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:textColor="@color/md_white_1000"
-                        android:layout_marginTop="@dimen/_10sdp"
                         android:layout_marginLeft="@dimen/_10sdp"
                         android:text="45"
                         android:singleLine="true"
                         android:textSize="@dimen/_14sdp"/>
 
-                    <com.waltado.lynknow.customViews.LatoFontHeavyTextView
+                    <com.waltado.lynknow.customViews.LatoFontLightTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:textColor="@color/md_white_1000"
-                        android:layout_marginTop="@dimen/_10sdp"
                         android:layout_marginLeft="@dimen/_10sdp"
                         android:text="Mumbai"
                         android:singleLine="true"
@@ -91,7 +88,7 @@
 
                 </LinearLayout>
 
-                <com.waltado.lynknow.customViews.LatoFontHeavyTextView
+                <com.waltado.lynknow.customViews.LatoFontLightTextView
                     android:id="@+id/description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -150,7 +147,7 @@
                 app:stl_indicatorWithoutPadding="true"
                 app:stl_indicatorAlwaysInCenter="false"
                 app:stl_dividerThickness="0dp"
-                app:stl_defaultTabTextSize="@dimen/_9sdp"
+                app:stl_defaultTabTextSize="@dimen/_10sdp"
                 app:stl_indicatorColor="#fff"
                 app:stl_indicatorCornerRadius="@dimen/_20sdp"
                 app:stl_indicatorInterpolation="linear"

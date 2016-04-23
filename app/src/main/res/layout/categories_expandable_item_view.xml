@@ -55,7 +55,7 @@
                 android:id="@+id/arrow"
                 android:layout_width="@dimen/_25sdp"
                 android:layout_height="@dimen/_25sdp"
-                android:background="@drawable/ic_arrow_right_grey" />
+                android:background="@drawable/ic_arrow_down_grey" />
 
         </RelativeLayout>
 

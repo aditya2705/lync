@@ -42,7 +42,7 @@ public class MapActivity extends AppCompatActivity {
         bottomSheetView.findViewById(R.id.activity_view).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MapActivity.this, SelectActivity.class);
+                Intent intent = new Intent(MapActivity.this, ActivitySelectActivity.class);
                 startActivity(intent);
             }
         });
@@ -124,7 +124,7 @@ public class MapActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_register) {
+        if (id == R.id.action_settings) {
             return true;
         }
 

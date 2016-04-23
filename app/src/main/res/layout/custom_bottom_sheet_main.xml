@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/appThemeColor">
 
     <LinearLayout
@@ -41,7 +41,7 @@
                 android:id="@+id/seekBar_text"
                 android:layout_width="@dimen/_25sdp"
                 android:layout_height="@dimen/_25sdp"
-                android:text="100"
+                android:text="0"
                 android:padding="@dimen/_3sdp"
                 android:background="@drawable/rectangle_rounded_2"
                 android:textColor="@color/appThemeColorDark"
@@ -50,7 +50,6 @@
                 android:layout_toRightOf="@id/seekBar"
                 android:layout_marginLeft="@dimen/_3sdp"
                 android:layout_centerVertical="true"
-                android:visibility="invisible"
                 android:gravity="center"/>
 
         </RelativeLayout>
@@ -67,7 +66,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="@dimen/_5sdp"
-                android:background="?attr/selectableItemBackground">
+                android:background="@drawable/transparent_selector">
 
                 <ImageView
                     android:layout_width="@dimen/_30sdp"
@@ -94,7 +93,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="@dimen/_5sdp"
-                android:background="?attr/selectableItemBackground">
+                android:background="@drawable/transparent_selector">
 
                 <ImageView
                     android:layout_width="@dimen/_30sdp"
@@ -121,7 +120,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="@dimen/_5sdp"
-                android:background="?attr/selectableItemBackground">
+                android:background="@drawable/transparent_selector">
 
                 <ImageView
                     android:layout_width="@dimen/_30sdp"
@@ -155,7 +154,7 @@
         android:layout_alignParentRight="true"
         android:padding="@dimen/_11sdp"
         android:src="@drawable/ic_cross_white"
-        android:background="?attr/selectableItemBackground"/>
+        android:background="@drawable/transparent_selector"/>
 
 
 
