@@ -65,6 +65,7 @@ public class MapActivity extends AppCompatActivity {
                 bottomSheetLayout.dismissSheet();
             }
         });
+
         bottomSheetSeekBar = (AppCompatSeekBar) bottomSheetView.findViewById(R.id.seekBar);
         seekBarPopupTextView = (TextView)bottomSheetView.findViewById(R.id.seekBar_text);
         bottomSheetSeekBar.setMax(100);
@@ -73,23 +74,15 @@ public class MapActivity extends AppCompatActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 seekBarPopupTextView.setText(String.valueOf(progress));
-                seekBarPopupTextView.setVisibility(View.VISIBLE);
-                final Animation animation = AnimationUtils.loadAnimation(MapActivity.this, R.anim.fade_in);
-                seekBarPopupTextView.startAnimation(animation);
 
             }
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-
-
             }
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-                final Animation animation = AnimationUtils.loadAnimation(MapActivity.this, R.anim.fade_out);
-                seekBarPopupTextView.startAnimation(animation);
-                seekBarPopupTextView.setVisibility(View.INVISIBLE);
             }
         });
 
@@ -99,12 +92,6 @@ public class MapActivity extends AppCompatActivity {
                 bottomSheetLayout.showWithSheetView(bottomSheetView);
             }
         });
-
-
-
-
-
-
 
     }
     

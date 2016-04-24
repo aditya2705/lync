@@ -138,6 +138,7 @@
                         android:src="@drawable/ic_quote"/>
 
                     <com.waltado.lynknow.customViews.LatoFontLightTextView
+                        android:id="@+id/yourself_character_count"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:adjustViewBounds="true"
@@ -148,12 +149,14 @@
                         android:textSize="@dimen/_11sdp"/>
 
                     <com.waltado.lynknow.customViews.LatoFontEditText
+                        android:id="@+id/edittext_yourself"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="@dimen/_10sdp"
                         android:gravity="center"
                         android:layout_centerInParent="true"
                         android:hint="Describe Yourself..."
+                        android:maxLength="140"
                         android:textSize="@dimen/_12sdp"
                         android:textColorHint="@color/appThemeColor"
                         android:textColor="@color/appThemeColorDark"
@@ -267,14 +270,17 @@
                         android:layout_centerVertical="true"
                         />
 
-                    <com.waltado.lynknow.customViews.LatoFontLightTextView
+                    <android.support.v7.widget.AppCompatAutoCompleteTextView
+                        android:id="@+id/homeTownView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Hometown..."
+                        android:hint="Hometown"
                         android:textColor="@color/appThemeColorDark"
                         android:layout_centerInParent="true"
+                        android:padding="@dimen/_10sdp"
                         android:layout_marginLeft="@dimen/_10sdp"
-                        android:textSize="@dimen/_12sdp"/>
+                        android:textSize="@dimen/_12sdp"
+                        />
 
 
 

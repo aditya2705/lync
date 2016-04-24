@@ -12,9 +12,6 @@ import com.waltado.lynknow.objects.GroupCustomObject;
 
 import java.util.ArrayList;
 
-/**
- * Created by SHWETHA on 24-02-2016.
- */
 public class GroupsRecyclerAdapter extends RecyclerView.Adapter<GroupsCustomViewHolder> {
 
     private Context context;

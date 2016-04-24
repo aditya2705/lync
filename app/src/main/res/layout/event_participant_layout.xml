@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="horizontal"
-    android:background="@drawable/transparent_selector"
+    android:background="?attr/selectableItemBackground"
     android:padding="@dimen/_5sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/icon"
@@ -13,20 +18,19 @@
         android:layout_height="@dimen/_50sdp"
         android:src="@drawable/dicaprio"
         app:civ_border_width="@dimen/_3sdp"
-        app:civ_border_color="@color/appThemeColor"
+        app:civ_border_color="#98f2de"
         android:layout_centerHorizontal="true"
         android:layout_margin="@dimen/_5sdp"
         />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:padding="@dimen/_10sdp"
-        android:gravity="center_vertical"
-        android:layout_height="@dimen/_60sdp">
-
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_gravity="center_vertical"
             android:orientation="vertical">
 
             <com.waltado.lynknow.customViews.LatoFontHeavyTextView
@@ -35,7 +39,6 @@
                 android:layout_height="wrap_content"
                 android:text="Leonardo DiCaprio"
                 android:singleLine="true"
-                android:maxWidth="@dimen/_150sdp"
                 android:textColor="@color/md_grey_800"
                 android:textSize="@dimen/_12sdp"/>
 
@@ -43,41 +46,31 @@
                 android:id="@+id/contact_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_8sdp"
-                android:text="Lorem ipsum Dolor sit Oscar goes to"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="Feeling Bored"
                 android:singleLine="true"
-                android:maxWidth="@dimen/_150sdp"
                 android:textColor="@color/md_grey_900"
                 android:textSize="@dimen/_10sdp"/>
 
         </LinearLayout>
 
 
-        <com.waltado.lynknow.customViews.LatoFontLightTextView
-            android:id="@+id/time_text"
-            android:layout_width="wrap_content"
+        <com.waltado.lynknow.customViews.LatoFontHeavyTextView
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="2.30 PM"
+            android:layout_weight="1"
+            android:text="Not Sure"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/_7sdp"
             android:singleLine="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:textColor="@color/md_grey_600"
+            android:textColor="@color/md_grey_800"
             android:textSize="@dimen/_10sdp"/>
 
-        <TextView
-            android:id="@+id/message_badge"
-            android:layout_width="@dimen/_19sdp"
-            android:layout_height="@dimen/_19sdp"
-            android:text="11"
-            android:layout_marginBottom="@dimen/_2sdp"
-            android:textSize="@dimen/_9sdp"
-            android:textColor="@color/md_white_1000"
-            android:gravity="center"
-            android:background="@drawable/circular_fill_1"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"/>
-
-    </RelativeLayout>
+    </LinearLayout>
 
 
-</LinearLayout>
+
+
+
+
+</RelativeLayout>

@@ -1,6 +1,7 @@
 package com.waltado.lynknow.fragments;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -11,9 +12,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.waltado.lynknow.R;
+import com.waltado.lynknow.activities.GroupDetailsActivity;
 import com.waltado.lynknow.adapters.GroupsRecyclerAdapter;
 import com.waltado.lynknow.adapters.GroupsRequestRecyclerAdapter;
 import com.waltado.lynknow.customViews.LatoFontHeavyTextView;
+import com.waltado.lynknow.interfaces.RecyclerItemClickListener;
 import com.waltado.lynknow.objects.GroupCustomObject;
 import com.waltado.lynknow.objects.GroupRequestCustomObject;
 
@@ -48,6 +51,13 @@ public class GroupListFragment extends Fragment {
 
         recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
+        recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getActivity(), new RecyclerItemClickListener.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                Intent intent = new Intent(getActivity(), GroupDetailsActivity.class);
+                startActivity(intent);
+            }
+        }));
 
         requestListBoolean = true;
         toggleRequestList();

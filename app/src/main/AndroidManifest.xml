@@ -44,7 +44,8 @@
             android:theme="@style/AppTheme"></activity>
 
         <activity android:name=".activities.GroupDetailsActivity"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme">
+        </activity>
 
         <activity android:name=".activities.EventDetailsActivity"
             android:theme="@style/AppTheme"></activity>

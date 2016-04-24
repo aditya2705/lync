@@ -1,6 +1,7 @@
 package com.waltado.lynknow.fragments;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -11,9 +12,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.waltado.lynknow.R;
+import com.waltado.lynknow.activities.EventDetailsActivity;
+import com.waltado.lynknow.activities.GroupDetailsActivity;
 import com.waltado.lynknow.adapters.EventInvitationsRecyclerAdapter;
 import com.waltado.lynknow.adapters.EventsRecyclerAdapter;
 import com.waltado.lynknow.customViews.LatoFontHeavyTextView;
+import com.waltado.lynknow.interfaces.RecyclerItemClickListener;
 import com.waltado.lynknow.objects.EventCustomObject;
 import com.waltado.lynknow.objects.EventInvitationCustomObject;
 
@@ -48,6 +52,13 @@ public class EventListFragment extends Fragment {
 
         recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
+        recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getActivity(), new RecyclerItemClickListener.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                Intent intent = new Intent(getActivity(), EventDetailsActivity.class);
+                startActivity(intent);
+            }
+        }));
 
         requestListBoolean = true;
         toggleRequestList();

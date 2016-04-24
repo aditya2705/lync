@@ -4,15 +4,25 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
+import android.widget.MultiAutoCompleteTextView;
+import android.widget.TextView;
 
 import com.waltado.lynknow.R;
+import com.waltado.lynknow.customViews.LatoFontEditText;
 
 public class UserInfoActivity extends AppCompatActivity {
 
     private Toolbar mToolbar;
+    private LatoFontEditText yourselfEditText;
+    private TextView yourselfCharacterCount;
+    private AutoCompleteTextView homeTownView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +32,34 @@ public class UserInfoActivity extends AppCompatActivity {
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+        yourselfCharacterCount = (TextView)findViewById(R.id.yourself_character_count);
+
+        yourselfEditText = (LatoFontEditText)findViewById(R.id.edittext_yourself);
+        yourselfEditText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                yourselfCharacterCount.setText(s.length()+"/140");
+            }
+        });
+
+        homeTownView = (AutoCompleteTextView)findViewById(R.id.homeTownView);
+
+        ArrayAdapter<String> adp=new ArrayAdapter<String>(this,
+                android.R.layout.simple_dropdown_item_1line,new String[]{"Mumbai","New Delhi","Nasik","Kolkata","Chennai","Bangalore","Calangute"});
+
+        homeTownView.setThreshold(1);
+        homeTownView.setAdapter(adp);
 
         findViewById(R.id.forward_fab).setOnClickListener(new View.OnClickListener() {
             @Override
